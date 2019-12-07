@@ -1,8 +1,16 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
+import { AddTaskComponent } from './components/add-task/add-task.component';
+import { HomeComponent } from './components/home/home.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: 'home', component: HomeComponent},
+  {path: 'add-task', component: AddTaskComponent},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '**', component: NotfoundComponent},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
