@@ -1,1 +1,14 @@
-<p>task works!</p>
+ <div class="container">
+        <h1 class="text-center">TASK</h1>
+
+        <!-- Show if there's no id -->
+        <div  *ngIf='!taskId'>
+            <p class="alert alert-danger">Can't match any id</p>
+        </div>
+        <!-- Show if there's id -->
+        <input [(ngModel)]="task.title"  type="text" class="form-control mb-2" placeholder="Title" [(ngModel)]="Name">
+        <textarea [(ngModel)]="task.description"  type="text" class="form-control mb-2" placeholder="Describtion" ></textarea>
+        <button class="btn btn-primary mr-2" (click)='editTask()'>Edit</button>
+        <a  class="btn btn-danger mr-2 text-white" (click)='deletTask()'>Delete</a>
+        <a routerLink="/home" class="btn btn-secondary">Cancle</a>
+    </div>
