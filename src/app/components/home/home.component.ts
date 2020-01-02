@@ -9,7 +9,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private taskServ: TaskService, private title: Title) {
+  constructor(public taskServ: TaskService, private title: Title) {
     this.title.setTitle('TODOZ');
    }
 

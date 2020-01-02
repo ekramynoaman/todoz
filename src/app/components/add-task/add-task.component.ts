@@ -10,7 +10,7 @@ import { Title } from '@angular/platform-browser';
 })
 export class AddTaskComponent implements OnInit {
 
-  constructor(private taskServ: TaskService, private router: Router, private title: Title) {
+  constructor(public taskServ: TaskService, private router: Router, private title: Title) {
     this.title.setTitle('Add Task');
    }
 

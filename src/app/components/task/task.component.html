@@ -6,7 +6,7 @@
             <p class="alert alert-danger">Can't match any id</p>
         </div>
         <!-- Show if there's id -->
-        <input [(ngModel)]="task.title"  type="text" class="form-control mb-2" placeholder="Title" [(ngModel)]="Name">
+        <input [(ngModel)]="task.title"  type="text" class="form-control mb-2" placeholder="Title">
         <textarea [(ngModel)]="task.description"  type="text" class="form-control mb-2" placeholder="Describtion" ></textarea>
         <button class="btn btn-primary mr-2" (click)='editTask()'>Edit</button>
         <a  class="btn btn-danger mr-2 text-white" (click)='deletTask()'>Delete</a>

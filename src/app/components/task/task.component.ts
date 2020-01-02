@@ -13,7 +13,7 @@ export class TaskComponent implements OnInit {
   taskId;
   task;
 
-  constructor(private route: ActivatedRoute, private taskServ: TaskService, private router: Router, private title: Title) {
+  constructor(private route: ActivatedRoute, public taskServ: TaskService, private router: Router, private title: Title) {
     this.title.setTitle('Task');
    }
 
